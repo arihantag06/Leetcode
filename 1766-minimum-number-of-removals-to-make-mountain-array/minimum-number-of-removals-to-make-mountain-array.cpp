@@ -17,7 +17,7 @@ public:
     for (int i = n - 1; i >= 0; --i) {
         for (int j = i + 1; j < n; ++j) {
             if (nums[j] < nums[i]) {
-                right[i] = std::max(right[i], right[j] + 1);
+                right[i] = max(right[i], right[j] + 1);
             }
         }
     }
