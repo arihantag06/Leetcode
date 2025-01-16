@@ -16,8 +16,6 @@ public:
         if(lenNums2%2==0) xorr1 = 0;
         
 
-        return xorr1^xorr2;
-
-        
+        return xorr1^xorr2;   
     }
 };
