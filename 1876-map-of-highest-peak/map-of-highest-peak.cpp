@@ -31,7 +31,6 @@ public:
                 if(nr<n && nr>=0 && nc<m & nc>=0 && height[nr][nc]==-1 ){
                     height[nr][nc] = h+1;
                     q.push({height[nr][nc] , {nr,nc}});
-                    isWater[nr][nc]=-1;
                 }
             }
 
