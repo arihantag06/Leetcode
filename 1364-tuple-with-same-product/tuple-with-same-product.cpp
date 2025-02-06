@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int tupleSameProduct(vector<int>& nums) {
+        map<int,int>mp;
+        int n = nums.size();
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                int prod = nums[i]*nums[j];
+                mp[prod]++;
+            }
+        }
+
+        int count = 0;
+        for(auto it:mp){
+            int num = it.second;
+            if(num>=2){
+                count+= num*(num-1)/2;
+            }
+        }
+
+        return count*8;
+    }
+};
