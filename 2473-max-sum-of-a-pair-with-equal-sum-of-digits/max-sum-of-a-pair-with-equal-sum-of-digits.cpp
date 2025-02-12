@@ -17,12 +17,6 @@ public:
         int maxSum = -1;
         for(auto it:mp){
             vector<int> t = it.second;
-            
-            cout<<it.first<<" ";
-            for(auto x:t){
-                cout<<x<<" ";
-            }
-            cout<<endl;
             if(t.size()>=2)maxSum = max(maxSum , t[0]+t[1]);
         }
         return maxSum;
