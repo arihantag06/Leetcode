@@ -1,24 +1,24 @@
 class Solution {
 public:
     vector<char> vec = {'a', 'b', 'c'};
-    
-    void solve(string s, vector<string>& v, int n, char last) {
+    int count=0;
+    void solve(string s, int n, char last,string&op,int k) {
         if (s.size() == n) {
-            v.push_back(s);
+            count++;
+            if(count==k)op=s;
             return;
         }
-
         for (char c : vec) {
             if (c == last) continue;
             s.push_back(c);
-            solve(s, v, n, c);
+            solve(s, n, c,op,k);
             s.pop_back();
         }
     }
-    
+
     string getHappyString(int n, int k) {
-        vector<string> v;
-        solve("", v, n, ' ');  
-        return k <= v.size() ? v[k - 1] : "";
+        string  op;
+        solve("", n, ' ',op,k);  
+        return op;
     }
 };
