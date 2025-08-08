@@ -15,9 +15,6 @@ public:
             if (cnt % 3 == 0) {
                 res += cnt / 3;
             }
-            else if (cnt % 3 == 1) {
-                res += (cnt / 3 - 1) + 2;
-            }
             else {  
                 res += cnt / 3 + 1;
             }
