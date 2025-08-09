@@ -17,6 +17,8 @@ public:
     }
     int kmp(string text,string pattern){
         vector<int> lps = computeLPS(pattern);
+        for(auto x:lps)cout<<x<<" ";
+        cout<<endl;
         int i = 0, j = 0;
         while(i < (int)text.size()){
             if(text[i] == pattern[j]) { i++; j++; }
