@@ -9,7 +9,7 @@ public:
             if(i+2<=n) take2=a[i]+a[i+1]-dp[i+2];
             int take3=INT_MIN;
             if(i+3<=n) take3=a[i]+a[i+1]+a[i+2]-dp[i+3];
-            dp[i]=max(take1, max(take2, take3));
+            dp[i]=max({take1, take2, take3});
         }
         if(dp[0]>0) return "Alice";
         if(dp[0]<0) return "Bob";
